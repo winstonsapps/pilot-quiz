@@ -1,12 +1,13 @@
 from guizero import App, Text, PushButton
 from question import Question
+from qnumandrights import *
 from time import sleep
 
 
 
-n = input('enter csv name: ') # ASKS FOR NAME (test feature)
+stringforcsv = input('enter csv name: ') # ASKS FOR NAME (test feature)
 
-csv = open(n + '.csv', 'r')  # opens file
+csv = open(stringforcsv + '.csv', 'r')  # opens file
 
 lines = csv.readlines() # creats a list of lines    list --> array
 
@@ -74,12 +75,10 @@ for j in range(len(lines)):
 # Method to call when button pressed
 
 # Set up the app
-qnum = 0
-rights=0
+qandr = qnumandrights()
 
 def rightsplus(num):
-    global rights
-    rights = rights + num
+    qandr.
     
 def afteraction():
     global qnum
@@ -109,7 +108,7 @@ def afteraction():
         button4.destroy()
     
     
-app = App((n + " QUIZ"))
+app = App((stringforcsv + " QUIZ"))
 
 def action1():
     if (questions[qnum].ans == 1):
@@ -179,6 +178,7 @@ app.display()
     
     
 
+    
     
     
     
