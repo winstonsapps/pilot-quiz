@@ -148,7 +148,7 @@ def line():
     Text(app, "\n")
 
 
-text = Text(app, n + ' QUIZ')
+text = Text(app, stringforcsv + ' QUIZ')
 
 line()
 
